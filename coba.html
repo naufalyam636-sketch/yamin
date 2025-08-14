@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      body{
+        background-color: rgba(62, 43, 18, 0.653);
+        
+      }
+      header{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 30px;
+        margin-bottom: 20px;
+        
+       
+      }
+      .about-me{
+        background-color: rgb(199, 178, 151);
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 3;
+        gap: 10px;
+        height: 375px;
+        grid-template-areas: 
+        'judul judul judul'
+        'teks teks gambar'
+        'teks teks gambar';
+        border-radius: 25px 25px 26px 25px;
+        border: 2px black solid;
+        justify-content: center;
+        
+      }
+
+      .judulAbout{
+        grid: judul;
+        display: flex;
+        height: 250px;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+        
+      }
+      h2{
+        display: flex;
+        justify-content: center;
+        text-shadow: 16px 17px 6px rgba(66, 68, 90, 1);
+        
+      }
+
+      .teksAbout{
+        margin-top: auto;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .gambarAbout{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        
+      }
+      .gambarAbout img{
+        max-width: 140px;
+        max-height: auto;
+        aspect-ratio: 1/1;
+        -webkit-box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+        -moz-box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+         box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+        
+      }
+      .profil{
+        grid-column: span 2 / span 2;
+        align-items: center;
+        justify-content: center;
+        background: local rgb(143, 121, 87);
+        padding: 10px;
+        display: flex;
+        margin-left: 35%;
+        margin-right: 35%;  
+        border-radius: 10px;
+        border: 2px black solid;
+        -webkit-box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+        -moz-box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+         box-shadow: 21px 13px 17px -1px rgba(72, 72, 75, 1);
+         
+      }
+      .prestasi{
+        background-color: rgb(199, 178, 151);
+       
+        display: inline-block;
+        justify-self: center;
+        font-size: ;
+       
+      }
+      #yamin{
+        margin-top: 9%;
+        margin-right: 9px;
+        font-size: 20px;
+        font-family: serif;
+      }
+      #foto{
+        width: 145px;
+        height: 145px;
+        border: 2px black solid;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 18px;
+        margin-right: 10px;
+      }
+      .prestasi{
+        border-radius: 20%;
+        padding-right: 15px;
+        border: solid black;
+        
+      }
+      .artikel{
+       display: flex;
+       grid-template-columns: repeat(2,1fr);
+       grid-row: 1fr;
+       margin: 0;
+       justify-content: center;
+       align-items: center;
+      }
+      
+      .vidio{
+        max-width: 100% ;
+        min-width: none;
+        padding: 25px;
+      }
+
+      .penjelasan{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: 100px;
+        padding: 30px;
+            
+      }
+
+      .artikel{
+        background-color: rgba(114, 114, 110, 0,1);
+        padding: 15px;
+        font-size: 30px;
+        margin: 0px;
+
+      }
+      .tabel {
+        display: flex;
+        justify-content: center;
+      }
+
+      table{
+        border-collapse: collapse;
+        width: auto;
+        background: rgb(111, 104, 104);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+       th, td {
+        padding: 12px 16px;
+        text-align: center;
+      }
+
+      thead {
+        background: rgb(111, 104, 104); 
+        color: white;
+      }
+
+      tbody tr:nth-child(even) {
+        background: rgb(111, 104, 104); 
+      }
+
+      tbody tr:hover {
+        background: rgb(160, 149, 149); 
+        cursor: pointer;
+      }
+
+      th:first-child, td:first-child {
+        text-align: center; 
+      }
+      
+      footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin: 60px;
+        background-color:rgb(2, 2, 2) ;
+        border-radius: 20px;
+        margin-bottom: 0%;
+      }
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding-top: 1px;
+        box-shadow: ;
+        
+      }
+      .skill h2{
+        padding: 15px;
+      }
+      #prestasi{
+        font-size: 20px;
+      }
+      @media (max-width:768px){
+@media (max-width: 768px) {
+  .gambarAbout{
+    
+
+  }
+  .profil{
+    margin-bottom: 50px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  header {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .about-me {
+    grid-template-areas:
+      'judul'
+      'teks'
+      'gambar';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    grid-column: span 2 / span 2;
+  }
+  .artikel {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+     grid-column: span 2 / span 2;
+  }
+  iframe, img {
+    max-width: 100%;
+    height: auto;
+  }
+  .profil {
+    margin: auto;
+    width: fit-content;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .gambarAbout img{
+    max-width: 70px;
+    aspect-ratio: 1/1;
+  }
+}
+          
+      }
+    </style>
+  </head>
+  <body>
+    <header class="pendahuluan">
+      <div class="profil">
+        <h1>Profil Saya</h1>
+      </div>
+      <div class="about-me">
+        
+        <div class="judulAbout"><h2>About Me :</h2>
+         <div class="gambarAbout">
+          <img src="c:\Users\Hype AMD\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\E633C6AB554C0E79EB395D73FC855347\Gambar WhatsApp 2025-08-14 pukul 07.59.05_c2b5b19d.jpg" alt="" id="foto">
+        <div class="teksAbout">
+          <p id="yamin">Muhammad Naufal Yamin, lahir pada tanggal 06/03/2006, menyelesaikan study sederajat high school di MAN 3 Kota Padang, dan kini sedang fokus di bidang fullstack <br> (frontend development & backend development)</p>
+        </div>
+      </div>
+       
+        </div>
+      </div>
+      <div class="prestasi">
+        
+        <h2> Prestasi :</h2>
+        <p>
+          <ol>
+            <li>lomba tahfizd tingkat provinsi cabang 2 juz</li>
+            <li>lomba pantomim tingkat provinsi</li>
+            <li>ketua bahasa arab ma'had dar-el iman</li>
+            <li>frontend development</li>
+            <li>backend development</li>
+          </ol>
+        </p>
+      </div>
+    </header><br>
+    <h2 class="artikel" style="background-color:rgb(114, 114, 110) ;">Article</h2>
+    <main class="artikel">
+      <div class="vidio">
+       <iframe
+            width="480"
+            height="300"
+            src="https://www.youtube.com/embed/p3GkTO7t3rU?si=opVAtp_2OUjY1z_L"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+      </div>
+      <div class="penjelasan">
+           <p>"Pentingnya belajar terletak pada kemampuannya membuka peluang
+      kesuksesan, meningkatkan kecerdasan, dan membantu seseorang beradaptasi
+      dengan perubahan. Belajar efektif dapat dicapai dengan memahami materi,
+      membuat ringkasan, dan memilih metode belajar yang sesuai. Tips belajar
+      ringkas termasuk membuat jadwal, mencari lingkungan belajar yang nyaman,
+      dan menjaga kesehatan fisik dan mental."</p> <br> by.yamin
+        
+      </div>
+    </main><br>
+    <aside class="skill">
+      <h2 style="background-color:rgb(114, 114, 110) ;">Skill</h2>
+      <div class="tabel">
+       <table border="1">
+        <tr>
+          <th rowspan="2">no</th>
+          <th colspan="2">keterangan</th>
+        </tr>
+        <tr>
+          <th>skill</th>
+          <th>value</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>B.Arab</td>
+          <td>aktif</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Frontend</td>
+          <td>aktif</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>backend</td>
+          <td>aktif</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>b.inggris</td>
+          <td>pasif</td>
+        </tr>
+      </table> 
+      </div>
+      
+    </aside>
+    <footer class="penutup">
+      <div id="ig">
+        <a href="https://www.instagram.com/yminnafal/" target="_blank" >
+          <img src="c:\Users\Hype AMD\Downloads\ig.jpg" alt="">
+        </a>
+      </div>
+      <div id="fb">
+        <a href="https://www.facebook.com/yamin.muhammad.2025?mibextid=ZbWKwL" target="_blank">
+          <img src="c:\Users\Hype AMD\Downloads\fb).png" alt="">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
